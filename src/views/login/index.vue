@@ -23,7 +23,7 @@
                                 <Icon icon="ph:x-circle-fill" />
                             </div>
                         </div>
-                        <button @click="sendCode">获取验证码</button>
+                        <button @click.stop="sendCode">获取验证码</button>
                         <div class="login_term">
                             <input type="radio" :checked="flag" @click="negation" />
                             我已阅读并同意《服务条款》、《隐私政策》
