@@ -116,6 +116,9 @@ export default {
         value(value) {
             if (value.length === 4) {
                 this.$store.dispatch("loginCellphoneDate", { phone: this.phone, captcha: value })
+                this.$router.push({
+                    path:"/homePage"
+                })
             } else {
                 console.log("b");
             }

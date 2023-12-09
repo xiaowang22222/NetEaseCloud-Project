@@ -11,8 +11,8 @@ const store = new Vuex.Store({
         blocks: [],
         auth: [],
         playlistdata: [],
-        show:false,
-       
+        show: false,
+
     },
     // actions触发store.dispatch("")
     mutations: {
@@ -26,13 +26,11 @@ const store = new Vuex.Store({
             state.playlistdata = res
         },
         deleteCachedData(state) {
-            if (confirm('确定退出吗？')) {
-                state.auth.cookie = "";
-            }
+            state.auth.cookie = "";
 
         },
-        showa(state,val){
-            state.show=val 
+        showa(state, val) {
+            state.show = val
         },
     },
     //mutations 定义同步修改公共数据的方法

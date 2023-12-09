@@ -1,5 +1,5 @@
 <template>
-    <div  class="dark:bg-[#454545] dark:text-[#fff]">
+    <div class="dark:bg-[#454545] dark:text-[#fff]">
         <!-- 开通黑胶VIP -->
         <div
             class="mx-auto w-[76vw] h-[27.66vw] bg-gradient-to-r from-[#3b3b3b] to-[#5f5050] px-[3.96vw] text-[#9e8f8f] rounded-[20px]">
@@ -615,134 +615,134 @@
                             <path fill="currentColor"
                                 d="m210.83 85.17l-56-56A4 4 0 0 0 152 28H56a12 12 0 0 0-12 12v176a12 12 0 0 0 12 12h144a12 12 0 0 0 12-12V88a4 4 0 0 0-1.17-2.83ZM156 41.65L198.34 84H156ZM200 220H56a4 4 0 0 1-4-4V40a4 4 0 0 1 4-4h92v52a4 4 0 0 0 4 4h52v124a4 4 0 0 1-4 4Z">
 
-                        </path>
-                    </svg>
-                    <span class="dark:text-[#f0f0f0] text-[color:#333333] text-[3.5vw] ml-[2.73vw]">个人信息收集与使用清单</span>
-                </div>
-                <div class="flex items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                        aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 24 24"
-                        class="font-[800] w-[6vw] h-[6vw] iconify iconify--mingcute" style="color: rgb(181, 181, 181);">
-                        <g fill="none" fill-rule="evenodd">
-                            <path
-                                d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022m-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01l-.184-.092">
-
                             </path>
+                        </svg>
+                        <span class="dark:text-[#f0f0f0] text-[color:#333333] text-[3.5vw] ml-[2.73vw]">个人信息收集与使用清单</span>
+                    </div>
+                    <div class="flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 24 24"
+                            class="font-[800] w-[6vw] h-[6vw] iconify iconify--mingcute" style="color: rgb(181, 181, 181);">
+                            <g fill="none" fill-rule="evenodd">
+                                <path
+                                    d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022m-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01l-.184-.092">
+
+                                </path>
+                                <path fill="currentColor"
+                                    d="M15.707 11.293a1 1 0 0 1 0 1.414l-5.657 5.657a1 1 0 1 1-1.414-1.414l4.95-4.95l-4.95-4.95a1 1 0 0 1 1.414-1.414l5.657 5.657">
+
+                                </path>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between h-[12vw] px-[3.6vw]">
+                    <div class="flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 48 48"
+                            class="dark:text-[#f0f0f0] text-[#333] font-[800] w-[4vw] h-[4vw] iconify iconify--icon-park-outline">
+                            <g fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="4">
+                                <path
+                                    d="M40 12a4 4 0 1 0 0-8a4 4 0 0 0 0 8ZM24 28a4 4 0 1 0 0-8a4 4 0 0 0 0 8Zm16 16a4 4 0 1 0 0-8a4 4 0 0 0 0 8ZM8 12a4 4 0 1 0 0-8a4 4 0 0 0 0 8Zm0 32a4 4 0 1 0 0-8a4 4 0 0 0 0 8Z">
+
+                                </path>
+                                <path stroke-linecap="round" d="M20 40h8M20 8h8M8 20v8m32-8v8">
+
+                                </path>
+                            </g>
+                        </svg>
+                        <span class="dark:text-[#f0f0f0] text-[color:#333333] text-[3.5vw] ml-[2.73vw]">个人信息第三方共享清单</span>
+                    </div>
+                    <div class="flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 24 24"
+                            class="font-[800] w-[6vw] h-[6vw] iconify iconify--mingcute" style="color: rgb(181, 181, 181);">
+                            <g fill="none" fill-rule="evenodd">
+                                <path
+                                    d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022m-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01l-.184-.092">
+
+                                </path>
+                                <path fill="currentColor"
+                                    d="M15.707 11.293a1 1 0 0 1 0 1.414l-5.657 5.657a1 1 0 1 1-1.414-1.414l4.95-4.95l-4.95-4.95a1 1 0 0 1 1.414-1.414l5.657 5.657">
+
+                                </path>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between h-[12vw] px-[3.6vw]">
+                    <div class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em"
+                            height="1em" viewBox="0 0 32 32"
+                            class="dark:text-[#f0f0f0] text-[#333] font-[800] w-[4vw] h-[4vw] iconify iconify--icons8">
                             <path fill="currentColor"
-                                d="M15.707 11.293a1 1 0 0 1 0 1.414l-5.657 5.657a1 1 0 1 1-1.414-1.414l4.95-4.95l-4.95-4.95a1 1 0 0 1 1.414-1.414l5.657 5.657">
+                                d="M16 4c-2.144 0-3.884 1.72-3.97 3.844A9.933 9.933 0 0 0 6 17c0 .17-.008.36 0 .563c-1.185.696-2 1.972-2 3.437c0 2.197 1.803 4 4 4c.575 0 1.13-.122 1.625-.344C11.358 26.112 13.618 27 16 27s4.642-.888 6.375-2.344A3.98 3.98 0 0 0 24 25c2.197 0 4-1.803 4-4c0-1.48-.825-2.777-2.03-3.47c.015-.16.03-.32.03-.53a9.931 9.931 0 0 0-6.03-9.156C19.883 5.72 18.143 4 16 4m0 2c1.116 0 2 .884 2 2s-.884 2-2 2s-2-.884-2-2s.884-2 2-2m-3.53 3.844C13.14 11.118 14.47 12 16 12c1.53 0 2.86-.882 3.53-2.156A7.937 7.937 0 0 1 24 17c-2.197 0-4 1.803-4 4c0 .895.31 1.706.813 2.375A8.08 8.08 0 0 1 16 25a8.077 8.077 0 0 1-4.813-1.625A3.93 3.93 0 0 0 12 21c0-2.197-1.803-4-4-4c0-3.12 1.79-5.856 4.47-7.156zM8 19c1.116 0 2 .884 2 2s-.884 2-2 2s-2-.884-2-2s.884-2 2-2m16 0c1.116 0 2 .884 2 2s-.884 2-2 2s-2-.884-2-2s.884-2 2-2">
 
                             </path>
-                        </g>
-                    </svg>
+                        </svg>
+                        <span class="dark:text-[#f0f0f0] text-[color:#333333] text-[3.5vw] ml-[2.73vw]">个人信息与隐私保护</span>
+                    </div>
+                    <div class="flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 24 24"
+                            class="font-[800] w-[6vw] h-[6vw] iconify iconify--mingcute" style="color: rgb(181, 181, 181);">
+                            <g fill="none" fill-rule="evenodd">
+                                <path
+                                    d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022m-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01l-.184-.092">
+
+                                </path>
+                                <path fill="currentColor"
+                                    d="M15.707 11.293a1 1 0 0 1 0 1.414l-5.657 5.657a1 1 0 1 1-1.414-1.414l4.95-4.95l-4.95-4.95a1 1 0 0 1 1.414-1.414l5.657 5.657">
+
+                                </path>
+                            </g>
+                        </svg>
+                    </div>
                 </div>
-            </div>
-            <div class="flex items-center justify-between h-[12vw] px-[3.6vw]">
-                <div class="flex items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                        aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 48 48"
-                        class="dark:text-[#f0f0f0] text-[#333] font-[800] w-[4vw] h-[4vw] iconify iconify--icon-park-outline">
-                        <g fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="4">
-                            <path
-                                d="M40 12a4 4 0 1 0 0-8a4 4 0 0 0 0 8ZM24 28a4 4 0 1 0 0-8a4 4 0 0 0 0 8Zm16 16a4 4 0 1 0 0-8a4 4 0 0 0 0 8ZM8 12a4 4 0 1 0 0-8a4 4 0 0 0 0 8Zm0 32a4 4 0 1 0 0-8a4 4 0 0 0 0 8Z">
+                <div class="flex items-center justify-between h-[12vw] px-[3.6vw]">
+                    <div class="flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 48 48"
+                            class="dark:text-[#f0f0f0] text-[#333] font-[800] w-[4vw] h-[4vw] iconify iconify--icon-park-outline">
+                            <g fill="none">
+                                <path stroke="currentColor" stroke-linejoin="round" stroke-width="4"
+                                    d="M24 44a19.937 19.937 0 0 0 14.142-5.858A19.937 19.937 0 0 0 44 24a19.938 19.938 0 0 0-5.858-14.142A19.937 19.937 0 0 0 24 4A19.938 19.938 0 0 0 9.858 9.858A19.938 19.938 0 0 0 4 24a19.937 19.937 0 0 0 5.858 14.142A19.938 19.938 0 0 0 24 44Z">
 
-                            </path>
-                            <path stroke-linecap="round" d="M20 40h8M20 8h8M8 20v8m32-8v8">
+                                </path>
+                                <path fill="currentColor" fill-rule="evenodd" d="M24 37a2.5 2.5 0 1 0 0-5a2.5 2.5 0 0 0 0 5"
+                                    clip-rule="evenodd">
 
-                            </path>
-                        </g>
-                    </svg>
-                    <span class="dark:text-[#f0f0f0] text-[color:#333333] text-[3.5vw] ml-[2.73vw]">个人信息第三方共享清单</span>
-                </div>
-                <div class="flex items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                        aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 24 24"
-                        class="font-[800] w-[6vw] h-[6vw] iconify iconify--mingcute" style="color: rgb(181, 181, 181);">
-                        <g fill="none" fill-rule="evenodd">
-                            <path
-                                d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022m-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01l-.184-.092">
+                                </path>
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"
+                                    d="M24 12v16">
 
-                            </path>
-                            <path fill="currentColor"
-                                d="M15.707 11.293a1 1 0 0 1 0 1.414l-5.657 5.657a1 1 0 1 1-1.414-1.414l4.95-4.95l-4.95-4.95a1 1 0 0 1 1.414-1.414l5.657 5.657">
+                                </path>
+                            </g>
+                        </svg>
+                        <span class="dark:text-[#f0f0f0] text-[color:#333333] text-[3.5vw] ml-[2.73vw]">关于</span>
+                    </div>
+                    <div class="flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 24 24"
+                            class="font-[800] w-[6vw] h-[6vw] iconify iconify--mingcute" style="color: rgb(181, 181, 181);">
+                            <g fill="none" fill-rule="evenodd">
+                                <path
+                                    d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022m-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01l-.184-.092">
 
-                            </path>
-                        </g>
-                    </svg>
-                </div>
-            </div>
-            <div class="flex items-center justify-between h-[12vw] px-[3.6vw]">
-                <div class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em"
-                        height="1em" viewBox="0 0 32 32"
-                        class="dark:text-[#f0f0f0] text-[#333] font-[800] w-[4vw] h-[4vw] iconify iconify--icons8">
-                        <path fill="currentColor"
-                            d="M16 4c-2.144 0-3.884 1.72-3.97 3.844A9.933 9.933 0 0 0 6 17c0 .17-.008.36 0 .563c-1.185.696-2 1.972-2 3.437c0 2.197 1.803 4 4 4c.575 0 1.13-.122 1.625-.344C11.358 26.112 13.618 27 16 27s4.642-.888 6.375-2.344A3.98 3.98 0 0 0 24 25c2.197 0 4-1.803 4-4c0-1.48-.825-2.777-2.03-3.47c.015-.16.03-.32.03-.53a9.931 9.931 0 0 0-6.03-9.156C19.883 5.72 18.143 4 16 4m0 2c1.116 0 2 .884 2 2s-.884 2-2 2s-2-.884-2-2s.884-2 2-2m-3.53 3.844C13.14 11.118 14.47 12 16 12c1.53 0 2.86-.882 3.53-2.156A7.937 7.937 0 0 1 24 17c-2.197 0-4 1.803-4 4c0 .895.31 1.706.813 2.375A8.08 8.08 0 0 1 16 25a8.077 8.077 0 0 1-4.813-1.625A3.93 3.93 0 0 0 12 21c0-2.197-1.803-4-4-4c0-3.12 1.79-5.856 4.47-7.156zM8 19c1.116 0 2 .884 2 2s-.884 2-2 2s-2-.884-2-2s.884-2 2-2m16 0c1.116 0 2 .884 2 2s-.884 2-2 2s-2-.884-2-2s.884-2 2-2">
+                                </path>
+                                <path fill="currentColor"
+                                    d="M15.707 11.293a1 1 0 0 1 0 1.414l-5.657 5.657a1 1 0 1 1-1.414-1.414l4.95-4.95l-4.95-4.95a1 1 0 0 1 1.414-1.414l5.657 5.657">
 
-                        </path>
-                    </svg>
-                    <span class="dark:text-[#f0f0f0] text-[color:#333333] text-[3.5vw] ml-[2.73vw]">个人信息与隐私保护</span>
-                </div>
-                <div class="flex items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                        aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 24 24"
-                        class="font-[800] w-[6vw] h-[6vw] iconify iconify--mingcute" style="color: rgb(181, 181, 181);">
-                        <g fill="none" fill-rule="evenodd">
-                            <path
-                                d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022m-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01l-.184-.092">
-
-                            </path>
-                            <path fill="currentColor"
-                                d="M15.707 11.293a1 1 0 0 1 0 1.414l-5.657 5.657a1 1 0 1 1-1.414-1.414l4.95-4.95l-4.95-4.95a1 1 0 0 1 1.414-1.414l5.657 5.657">
-
-                            </path>
-                        </g>
-                    </svg>
-                </div>
-            </div>
-            <div class="flex items-center justify-between h-[12vw] px-[3.6vw]">
-                <div class="flex items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                        aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 48 48"
-                        class="dark:text-[#f0f0f0] text-[#333] font-[800] w-[4vw] h-[4vw] iconify iconify--icon-park-outline">
-                        <g fill="none">
-                            <path stroke="currentColor" stroke-linejoin="round" stroke-width="4"
-                                d="M24 44a19.937 19.937 0 0 0 14.142-5.858A19.937 19.937 0 0 0 44 24a19.938 19.938 0 0 0-5.858-14.142A19.937 19.937 0 0 0 24 4A19.938 19.938 0 0 0 9.858 9.858A19.938 19.938 0 0 0 4 24a19.937 19.937 0 0 0 5.858 14.142A19.938 19.938 0 0 0 24 44Z">
-
-                            </path>
-                            <path fill="currentColor" fill-rule="evenodd" d="M24 37a2.5 2.5 0 1 0 0-5a2.5 2.5 0 0 0 0 5"
-                                clip-rule="evenodd">
-
-                            </path>
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"
-                                d="M24 12v16">
-
-                            </path>
-                        </g>
-                    </svg>
-                    <span class="dark:text-[#f0f0f0] text-[color:#333333] text-[3.5vw] ml-[2.73vw]">关于</span>
-                </div>
-                <div class="flex items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                        aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 24 24"
-                        class="font-[800] w-[6vw] h-[6vw] iconify iconify--mingcute" style="color: rgb(181, 181, 181);">
-                        <g fill="none" fill-rule="evenodd">
-                            <path
-                                d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022m-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01l-.184-.092">
-
-                            </path>
-                            <path fill="currentColor"
-                                d="M15.707 11.293a1 1 0 0 1 0 1.414l-5.657 5.657a1 1 0 1 1-1.414-1.414l4.95-4.95l-4.95-4.95a1 1 0 0 1 1.414-1.414l5.657 5.657">
-
-                            </path>
-                        </g>
-                    </svg>
+                                </path>
+                            </g>
+                        </svg>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- 退出登录 -->
-    <div class="dark:bg-[#2c2c2c] h-[12vw] px-[3.6vw] bg-[#fff] w-[76vw] mt-[4vw] rounded-[15px] mx-auto leading-[12vw] text-center text-[3.6vw] text-[#ef4239]"
-        style="pointer-events: auto;" @click.stop="deleteCachedData">退出登录</div>
+        <!-- 退出登录 -->
+        <div class="dark:bg-[#2c2c2c] h-[12vw] px-[3.6vw] bg-[#fff] w-[76vw] mt-[4vw] rounded-[15px] mx-auto leading-[12vw] text-center text-[3.6vw] text-[#ef4239]"
+            style="pointer-events: auto;" @click.stop="deletea">退出登录</div>
     </div>
 </template>
 
@@ -750,23 +750,22 @@
 export default {
     name: "my-toolSide",
     methods: {
-       
+        deletea() {
+            this.$store.commit("deleteCachedData")
+        }
     },
 
-    computed:{
-        checked:{
-            get(){
+    computed: {
+        checked: {
+            get() {
                 return this.$store.state.show
             },
-            set:function(newValue){
-                this.$store.commit("showa",newValue)
-            },
-            deleteCachedData(){
-                this.$store.commit("deleteCachedData")
+            set: function (newValue) {
+                this.$store.commit("showa", newValue)
             }
-        }
+
+        },
     },
 }
 </script>
-<style>
-</style>
+<style></style>
