@@ -752,7 +752,6 @@ export default {
     methods: {
         deletea() {
             this.$store.commit("deleteCachedData")
-            location.reload();
         }
     },
 
