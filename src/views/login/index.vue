@@ -119,6 +119,7 @@ export default {
                 this.$router.push({
                     path:"/homePage"
                 })
+                location.reload();
             } else {
                 console.log("b");
             }

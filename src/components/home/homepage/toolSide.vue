@@ -752,6 +752,7 @@ export default {
     methods: {
         deletea() {
             this.$store.commit("deleteCachedData")
+            location.reload();
         }
     },
 
@@ -763,7 +764,6 @@ export default {
             set: function (newValue) {
                 this.$store.commit("showa", newValue)
             }
-
         },
     },
 }
