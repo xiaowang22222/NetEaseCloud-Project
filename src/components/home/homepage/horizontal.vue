@@ -57,12 +57,10 @@ export default {
             })
         }
     },
-    created() {
-        horizontalAlLlst().then((res) => {
-            this.horizontal = res.data.data.blocks[1].creatives[0].resources
-        }).catch((err) => {
-            console.log(err);
-        })
+    async created() {
+        const [err, res] = await horizontalAlLlst()
+        if(err) return
+        this.horizontal = res.data.data.blocks[1].creatives[0].resources
         this.currentdate = new Date().getDate()
     },
 }

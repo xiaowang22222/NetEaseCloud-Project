@@ -5,7 +5,7 @@
             <Icon icon="ant-design:more-outlined" />
         </div>
         <div class="w-[92vw]  ">
-            <div v-for="item in playlistdata.data.playlist" :key="item.id" class="pl-[5vw] pr-[5vw] mt-[3vw] ">
+            <div v-for="item in playlistdata?.data?.playlist" :key="item.id" class="pl-[5vw] pr-[5vw] mt-[3vw] ">
                 <div v-if="item.subscribed == true" class="flex items-center p-[3vw]">
                     <img :src="item.coverImgUrl" alt="" class="w-[20vw] h-[20vw] miplay mr-[5vw]">
                     <div>

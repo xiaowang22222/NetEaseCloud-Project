@@ -27,7 +27,7 @@ const store = new Vuex.Store({
         },
         deleteCachedData(state) {
             if (confirm('确定退出吗？')) {
-                state.auth = {};
+                state.auth.cookie = "";
             }
 
         },

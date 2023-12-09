@@ -747,11 +747,10 @@
 </template>
 
 <script>
-import { mapMutations } from 'vuex';
 export default {
     name: "my-toolSide",
     methods: {
-        ...mapMutations["deleteCachedData"],
+       
     },
 
     computed:{
@@ -761,6 +760,9 @@ export default {
             },
             set:function(newValue){
                 this.$store.commit("showa",newValue)
+            },
+            deleteCachedData(){
+                this.$store.commit("deleteCachedData")
             }
         }
     },

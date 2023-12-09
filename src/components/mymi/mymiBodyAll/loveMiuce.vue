@@ -3,12 +3,12 @@
         <div class=" flex  justify-around w-[92vw]">
             <div class="w-[55vw] h-[30vw] flex  lovetou ">
                 <div class="muicelove w-[20vw] h-[20vw]">
-                    <img :src="playlistdata.data.playlist[0].coverImgUrl" alt="">
+                    <img :src="playlistdata?.data?.playlist[0]?.coverImgUrl" alt="">
                     <Icon icon="tdesign:heart-filled" color="white" class="text-[10vw]" />
                 </div>
                 <div class="miLove">
-                    <p class=" text-[14px]">{{ playlistdata.data.playlist[0].name }}</p>
-                    <p>{{ playlistdata.data.playlist[0].trackCount }}首</p>
+                    <p class=" text-[14px]">{{ playlistdata?.data?.playlist[0]?.name }}</p>
+                    <p>{{ playlistdata?.data?.playlist[0]?.trackCount }}首</p>
                 </div>
             </div>
             <div class="loveright">

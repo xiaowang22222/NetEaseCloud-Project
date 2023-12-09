@@ -22,7 +22,7 @@ export const horizontalAll = () => {
 }
 
 export const horizontalAlLlst = () => {
-    return request.get("/homepage/block/page")
+    return co(request.get("/homepage/block/page"))
 }
 
 /**
