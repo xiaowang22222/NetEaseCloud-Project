@@ -13,7 +13,7 @@
             <Icon icon="material-symbols:keyboard-voice" class="w-[10vw] h-[10vw]" />
         </div>
         <van-popup v-model="show" position="left" :style="{ height: '100%' }" style="background-color: #e9e9e9;">
-            <router-link to="/login" v-show="flag">立刻登录</router-link>
+            <router-link to="/login" v-show="flag" class=" block w-10vw h-[10vw]">立刻登录</router-link>
             <div class="dark:bg-[#151515] flex justify-between items-center h-[16vw] px-[5vw] w-[84vw] sticky">
                 <div class="flex items-center justify-between ">
                     <div class="flex items-center">
@@ -47,7 +47,7 @@ export default {
         return {
             show: false,
             Info: [],
-            flag: false
+            flag: true
         }
     },
     methods: {
