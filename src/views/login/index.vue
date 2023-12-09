@@ -19,7 +19,7 @@
                                 {{ area }}
                                 <Icon icon="bxs:down-arrow" />
                             </div>
-                            <div class="last" @click="empty">
+                            <div class="last" @click.stop="empty">
                                 <Icon icon="ph:x-circle-fill" />
                             </div>
                         </div>
