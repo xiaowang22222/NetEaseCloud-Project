@@ -4,7 +4,7 @@ import axios from 'axios'
 import axiosRetry from 'axios-retry'
 // axios.ceeate返回是一个新的axios的实例
 const request = axios.create({
-    baseURL: "http://127.0.0.1:3000",
+    baseURL: "http://111.229.247.11:3000/",
     timeout: 3000,
     withCredentials: true
 })
