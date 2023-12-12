@@ -13,7 +13,7 @@
         <!-- <video :src="urlPath.url" class="h-[38vh] w-[100vw]" muted autoplay="autoplay" >
         </video> -->
         <!-- <div v-if="urlPath"> -->
-            <video ref="player">
+            <video ref="player" muted autoplay >
                 <source :src="urlPath.url" type="video/mp4" />
             </video>
         <!-- </div> -->

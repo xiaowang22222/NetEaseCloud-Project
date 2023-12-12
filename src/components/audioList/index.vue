@@ -15,8 +15,8 @@
                     </div>
                 </div>
                 <div class="w-[6vw] h-[10vw] relative  overflow-hidden" @click.stop="mixin_player.toggle()">
-                    <van-circle :value="mixin_player.progress*100"  :speed="100" layer-color="red" size="5.2vw"
-                        class=" absolute top-2.5 left-0.5 " />
+                    <van-circle :value="mixin_player.progress * 100" :speed="100" layer-color="#ccc" color="black"
+                        size="5.2vw" class=" absolute top-2.5 left-0.5 " />
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true"
                         role="img" width="11px" height="11px" viewBox="0 0 32 32"
                         class="top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] absolute iconify iconify--carbon"
@@ -36,7 +36,7 @@
                 <Icon icon="icon-park-solid:music-list" />
             </van-cell>
         </div>
-        <van-popup v-model="show" position="bottom" :style="{ height: '30%' }">
+        <van-popup v-model="show" position="bottom" :style="{ height: '40%' }">
             <div class="pl-[5vw] pr-[5vw]">
                 <div data-v-36d9f586="" class="playmusic py-[6vw]">
                     <h1 data-v-36d9f586="" class="text-[4vw] font-extrabold">
@@ -104,7 +104,8 @@
                                         d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12z">
                                     </path>
                                 </g>
-                            </svg></div>
+                            </svg>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -128,6 +129,7 @@ export default {
         setTimeout(() => {
             this.is_show = true
             this.mixin_player.CurrentTrackDetails
+            this.mixin_player.listOfPlaylistDetails = this.playlist
         }, 300);
     },
     methods: {

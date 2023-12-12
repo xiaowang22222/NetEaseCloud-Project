@@ -1,6 +1,7 @@
 <template>
     <div>
-        <div class="absolute w-[100vw] h-[100vh] bgImg " :style="{backgroundImage:'url('+ mixin_player.CurrentTrackDetails.al.picUrl +')'}" >
+        <div class="absolute w-[100vw] h-[100vh] bgImg "
+            :style="{ backgroundImage: 'url(' + mixin_player.CurrentTrackDetails.al.picUrl + ')' }">
             <div></div>
         </div>
         <div class="relative h-[100vh] pb-[12vw]  z-[100] ">
@@ -89,22 +90,105 @@
 
                         </path>
                     </svg>
-                    <svg data-v-8298fe8a="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                        aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 24 24"
-                        class="text-[6vw] text-[#fff] iconify iconify--uil">
-                        <path fill="currentColor"
-                            d="M12 2A10 10 0 0 0 2 12a9.89 9.89 0 0 0 2.26 6.33l-2 2a1 1 0 0 0-.21 1.09A1 1 0 0 0 3 22h9a10 10 0 0 0 0-20Zm0 18H5.41l.93-.93a1 1 0 0 0 0-1.41A8 8 0 1 1 12 20Zm5-9H7a1 1 0 0 0 0 2h10a1 1 0 0 0 0-2Zm-2 4H9a1 1 0 0 0 0 2h6a1 1 0 0 0 0-2ZM9 9h6a1 1 0 0 0 0-2H9a1 1 0 0 0 0 2Z">
+                    <router-link to="/comment">
+                        <svg data-v-8298fe8a="" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em"
+                            height="1em" viewBox="0 0 24 24" class="text-[6vw] text-[#fff] iconify iconify--uil">
+                            <path fill="currentColor"
+                                d="M12 2A10 10 0 0 0 2 12a9.89 9.89 0 0 0 2.26 6.33l-2 2a1 1 0 0 0-.21 1.09A1 1 0 0 0 3 22h9a10 10 0 0 0 0-20Zm0 18H5.41l.93-.93a1 1 0 0 0 0-1.41A8 8 0 1 1 12 20Zm5-9H7a1 1 0 0 0 0 2h10a1 1 0 0 0 0-2Zm-2 4H9a1 1 0 0 0 0 2h6a1 1 0 0 0 0-2ZM9 9h6a1 1 0 0 0 0-2H9a1 1 0 0 0 0 2Z">
 
-                        </path>
-                    </svg>
-                    <svg data-v-8298fe8a="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                        aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 24 24"
-                        class="text-[6vw] text-[#fff] iconify iconify--ri">
-                        <path fill="currentColor"
-                            d="M12 3c-.825 0-1.5.675-1.5 1.5S11.175 6 12 6s1.5-.675 1.5-1.5S12.825 3 12 3Zm0 15c-.825 0-1.5.675-1.5 1.5S11.175 21 12 21s1.5-.675 1.5-1.5S12.825 18 12 18Zm0-7.5c-.825 0-1.5.675-1.5 1.5s.675 1.5 1.5 1.5s1.5-.675 1.5-1.5s-.675-1.5-1.5-1.5Z">
+                            </path>
+                        </svg>
+                    </router-link>
+                    <div @click.stop="showPopup">
+                        <svg data-v-8298fe8a="" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em"
+                            height="1em" viewBox="0 0 24 24" class="text-[6vw] text-[#fff] iconify iconify--ri">
+                            <path fill="currentColor"
+                                d="M12 3c-.825 0-1.5.675-1.5 1.5S11.175 6 12 6s1.5-.675 1.5-1.5S12.825 3 12 3Zm0 15c-.825 0-1.5.675-1.5 1.5S11.175 21 12 21s1.5-.675 1.5-1.5S12.825 18 12 18Zm0-7.5c-.825 0-1.5.675-1.5 1.5s.675 1.5 1.5 1.5s1.5-.675 1.5-1.5s-.675-1.5-1.5-1.5Z">
 
-                        </path>
-                    </svg>
+                            </path>
+                        </svg>
+                    </div>
+                    <van-popup v-model="show" position="bottom" :style="{ height: '40%' }">
+                        <div class="pl-[5vw] pr-[5vw]">
+                            <div data-v-36d9f586="" class="playmusic py-[6vw]">
+                                <h1 data-v-36d9f586="" class="text-[4vw] font-extrabold">
+                                    当前播放 <span data-v-36d9f586="" class="text-[2vw] text-[#929293]">(35) </span></h1>
+                                <div data-v-36d9f586="" class="flex justify-between mt-[6.6vw] items-center">
+                                    <div data-v-36d9f586="" class="flex"><svg data-v-36d9f586=""
+                                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                            aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 48 48"
+                                            class="text-[5vw] text-[#B1B1B1] iconify iconify--arcticons">
+                                            <g transform="translate(48 0) scale(-1 1)">
+                                                <path fill="none" stroke="currentColor" stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                    d="M17.72 12.5H16A11.5 11.5 0 0 0 4.5 24h0A11.5 11.5 0 0 0 16 35.5h16A11.5 11.5 0 0 0 43.5 24h0A11.5 11.5 0 0 0 32 12.5H21.881">
+                                                </path>
+                                                <path fill="none" stroke="currentColor" stroke-linecap="round"
+                                                    stroke-linejoin="round" d="m28.701 5.68l-6.82 6.82l6.82 6.82"></path>
+                                            </g>
+                                        </svg>
+                                        <h1 data-v-36d9f586="" class="ml-[1.5vw] text-[3.4vw] font-medium">列表循环</h1>
+                                    </div>
+                                    <div data-v-36d9f586="" class="flex w-[30vw] justify-between"><svg data-v-36d9f586=""
+                                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                            aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 24 24"
+                                            class="text-[5vw] text-[#B1B1B1] iconify iconify--mi">
+                                            <g transform="translate(24 0) scale(-1 1)">
+                                                <path fill="currentColor"
+                                                    d="M12 2a1 1 0 0 1 1 1v10.586l2.293-2.293a1 1 0 0 1 1.414 1.414l-4 4a1 1 0 0 1-1.414 0l-4-4a1 1 0 1 1 1.414-1.414L11 13.586V3a1 1 0 0 1 1-1zM5 17a1 1 0 0 1 1 1v2h12v-2a1 1 0 1 1 2 0v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2a1 1 0 0 1 1-1z">
+                                                </path>
+                                            </g>
+                                        </svg> <svg data-v-36d9f586="" xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+                                            width="1em" height="1em" viewBox="0 0 20 20"
+                                            class="text-[5vw] text-[#B1B1B1] iconify iconify--fluent">
+                                            <g transform="translate(20 0) scale(-1 1)">
+                                                <path fill="currentColor"
+                                                    d="M15.5 7a2.5 2.5 0 0 1 2.496 2.335l.005.164v6a2.5 2.5 0 0 1-2.336 2.495l-.164.005h-6a2.5 2.5 0 0 1-2.495-2.336l-.005-.164v-6a2.5 2.5 0 0 1 2.336-2.495L9.5 7h6Zm0 1H9.502a1.5 1.5 0 0 0-1.493 1.355l-.007.144v6a1.5 1.5 0 0 0 1.356 1.493l.144.007h6a1.5 1.5 0 0 0 1.493-1.356L17 15.5v-6a1.5 1.5 0 0 0-1.356-1.493L15.5 8Zm-2.999 1a.5.5 0 0 1 .492.41L13 9.5v2.498h2.501a.5.5 0 0 1 .09.992l-.09.008H13l.001 2.5a.5.5 0 0 1-.992.09l-.008-.09L12 13H9.501a.5.5 0 0 1-.09-.992l.09-.008H12l.001-2.5a.5.5 0 0 1 .5-.5Zm.162-5.306l.048.158l.575 2.147H12.25l-.505-1.889a1.5 1.5 0 0 0-1.696-1.091l-.141.03l-5.796 1.554a1.5 1.5 0 0 0-1.091 1.695l.03.142l1.554 5.795A1.5 1.5 0 0 0 6 13.346v1a2.502 2.502 0 0 1-2.31-1.682l-.052-.17l-1.553-5.795a2.5 2.5 0 0 1 1.61-3.015l.158-.047l5.795-1.553a2.5 2.5 0 0 1 2.957 1.458l.057.152Z">
+                                                </path>
+                                            </g>
+                                        </svg> <svg data-v-36d9f586="" xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+                                            width="1em" height="1em" viewBox="0 0 2048 2048"
+                                            class="text-[5vw] text-[#B1B1B1] iconify iconify--fluent-mdl2">
+                                            <g transform="translate(2048 0) scale(-1 1)">
+                                                <path fill="currentColor"
+                                                    d="M1792 384h-128v1472q0 40-15 75t-41 61t-61 41t-75 15H448q-40 0-75-15t-61-41t-41-61t-15-75V384H128V256h512V128q0-27 10-50t27-40t41-28t50-10h384q27 0 50 10t40 27t28 41t10 50v128h512v128zM768 256h384V128H768v128zm768 128H384v1472q0 26 19 45t45 19h1024q26 0 45-19t19-45V384zM768 1664H640V640h128v1024zm256 0H896V640h128v1024zm256 0h-128V640h128v1024z">
+                                                </path>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div data-v-36d9f586="" class="flex justify-between items-center h-[14vw] "
+                                    v-for="item in mixin_player.listOfPlaylistDetails" :key="item.id"
+                                    @click.stop="qie(item)">
+                                    <div data-v-36d9f586="" class="flex items-center"><!---->
+                                        <div data-v-36d9f586="" class="text-[4.1vw] ml-[2vw] w-[60vw] line-clamp-1"><!---->
+                                            <!---->
+                                            {{ item.al.name }}
+                                            <span data-v-36d9f586="" class="text-[3vw] text-[#BCBCBC]">{{ item.ar[0].name
+                                            }}</span>
+                                        </div>
+                                    </div>
+                                    <div data-v-36d9f586="" class="flex items-center"><!----> <svg data-v-36d9f586=""
+                                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                            aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 24 24"
+                                            class="text-[5vw] text-[#B1B1B1] iconify iconify--ic">
+                                            <g transform="translate(24 0) scale(-1 1)">
+                                                <path fill="currentColor"
+                                                    d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12z">
+                                                </path>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </van-popup>
                 </div>
                 <!-- 进度条 -->
                 <div data-v-8298fe8a="" class="h-[8vw] w-[100vw] flex items-center px-[5vw] mt-[3vw]">
@@ -115,11 +199,11 @@
                             <div class="vue-slider-process"
                                 style="height: 100%; top: 0px; left: 0%; width: 0%; transition-property: width, left; transition-duration: 0s;">
                             </div>
-                            <div aria-valuetext="0" class="vue-slider-dot" role="slider" aria-valuenow="0" aria-valuemin="0"
+                            <!-- <div aria-valuetext="0" class="vue-slider-dot" role="slider" aria-valuenow="0" aria-valuemin="0"
                                 aria-valuemax="199.8" aria-orientation="horizontal" tabindex="0"
                                 style="width: 14px; height: 14px; transform: translate(-50%, -50%); top: 50%; left: 0%; transition: left 0s ease 0s;">
                                 <div class="vue-slider-dot-handle"></div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                     <div data-v-8298fe8a="" class="text-[#fff] text-[1.6vw] scale-[0.8] opacity-50">03:19</div>
@@ -144,18 +228,19 @@
                             d="M14 3.002a1 1 0 0 0-1.578-.816l-7 4.963a1 1 0 0 0-.007 1.628l7 5.037A1 1 0 0 0 14 13.003V3.002ZM2 2.5a.5.5 0 0 1 1 0v11a.5.5 0 0 1-1 0v-11Z">
                         </path>
                     </svg>
-                    <div data-v-8298fe8a=""
-                        class="w-[12vw] h-[12vw] rounded-[50%] bg-[#fff] flex items-center justify-center">
-                        <svg data-v-8298fe8a="" xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="20px"
-                            height="20px" viewBox="0 0 32 32" class="iconify iconify--carbon">
-                            <path fill="currentColor"
-                                d="M12 6h-2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2zm10 0h-2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2z">
-                            </path>
-                        </svg>
-                    </div> <svg data-v-8298fe8a="" xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em"
-                        viewBox="0 0 20 20" class="text-[#fff] iconify iconify--fluent">
+                    <div class="w-[12vw] h-[12vw] rounded-[50%] bg-[#fff] flex items-center justify-center"
+                        @click="mixin_player.toggle()">
+                        <div v-if="mixin_player.playing">
+
+                            <Icon icon="ph:pause-thin" />
+                        </div>
+                        <div v-else>
+                            <Icon icon="solar:playback-speed-broken" />
+                        </div>
+                    </div>
+                    <svg data-v-8298fe8a="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 20 20"
+                        class="text-[#fff] iconify iconify--fluent">
                         <path fill="currentColor"
                             d="M3 4.252c0-1 1.116-1.595 1.947-1.038l8.499 5.707a1.25 1.25 0 0 1 .007 2.071l-8.5 5.793A1.25 1.25 0 0 1 3 15.752v-11.5ZM17 3.5a.5.5 0 0 0-1 0v13a.5.5 0 1 0 1 0v-13Z">
                         </path>
@@ -177,15 +262,25 @@
 export default {
     data() {
         return {
+            show: false
         }
     },
     created() {
-        console.log(this.mixin_player.CurrentTrackDetails);
+        setTimeout(() => {
+            console.log(this.mixin_player.listOfPlaylistDetails);
+        }, 300)
     },
     methods: {
         dback() {
             this.$router.go(-1)
-        }
+        },
+        showPopup() {
+            this.show = true
+        },
+        qie(a) {
+            this.show = false
+            this.mixin_player.replaceTracks(this.mixin_player.tracks, a.id)
+        },
     }
 }
 </script>
@@ -197,7 +292,7 @@ export default {
     position: absolute;
 }
 
-.bgImg>div{
+.bgImg>div {
     position: absolute;
     top: 0;
     left: 0;
@@ -206,5 +301,4 @@ export default {
     background-color: rgba(183, 183, 183, 0.5);
     filter: blur(50vw);
 }
-
 </style>

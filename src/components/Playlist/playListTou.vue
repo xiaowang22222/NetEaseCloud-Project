@@ -1,11 +1,11 @@
 <template>
-    <div class="playlist_header h-[60vw] bg-gradient-to-br from-[#486D8D] to-[#6186AB] ">
+    <div class="playlist_header h-[63vw] bg-gradient-to-br from-[#486D8D] to-[#6186AB] ">
         <!-- 头部 -->
 
         <!-- 歌单名称 -->
-        <div class="h-[43vw] transition-all duration-20 0 relative from-[#486D8D] to-[#6186AB] pb-[5vw] pl-[3.9vw] pr-[3.4vw] pt-[3.5vw]"
+        <div class="h-[43vw] transition-all duration-20 0 relative from-[#486D8D] to-[#6186AB] pb-[5vw] pl-[3.9vw] pr-[3.4vw] pt-[4.5vw]"
             v-show="show">
-            <div class="h-[29vw] flex pt-[2.6vw] justify-between">
+            <div class="h-[29vw] flex pt-[3.5vw] justify-between">
                 <div class="w-[24vw] h-[25vw] pt-[1vw] relative">
                     <img :src="playlist?.playlist?.coverImgUrl" alt=""
                         class="w-[24vw] h-[24vw] rounded-[10px] relative z-[2]">
@@ -45,10 +45,10 @@
         </div>
         <div v-show="!show">
             <div class="fade-in">
-                <div class="h-[10vw] flex items-center text-[#fff] opacity-50 text-[3vw]">
+                <div class="h-[10vw] flex items-center text-[#fff] opacity-50 text-[3vw] pt-[5vw]">
                     喜欢这个歌单的用户也听了
                 </div>
-                <div class="w-[92vw] mx-auto overflow-hidden scroll-wrapper  horizontal" ref="scroll">
+                <div class="w-[92vw] pt-[2vw] mx-auto overflow-hidden scroll-wrapper  horizontal" ref="scroll">
                     <div class="flex w-[160vw]" >
                         <div class="w-[28vw] mr-[2.5vw]" v-for="val in related.playlists" :key="val.id">
                             <router-link :to="{ path: '/Playlist', query: { id: val.id } }">
@@ -70,25 +70,25 @@
             </div>
         </div>
         <div @click.stop="show = !show"
-            class="absolute right-[3.4vw] top-[16vw] w-[6vw] h-[6vw] rounded-[50%] bg-opacity-20 bg-[#fff] flex items-center justify-center">
+            class="absolute right-[3.4vw] top-[15vw] w-[6vw] h-[6vw] rounded-[50%] bg-opacity-20 bg-[#fff] flex items-center justify-center">
             <Icon icon="material-symbols-light:arrow-upward" class="text-[3vw] mt-[0.5vw] iconify iconify--ep"
                 v-show="!show" />
             <Icon icon="eva:arrow-ios-downward-fill" class="text-[3vw] mt-[0.5vw] iconify iconify--ep" v-show="show" />
         </div>
         <div>
-            <ul class="flex items-center">
+            <ul class="flex items-center justify-around">
                 <li
-                    class="flex items-center justify-center h-[9.9vw] rounded-[200px] bg-opacity-20 bg-[#fff] font-[800] flex-1 text-[#f8fefe] text-[3vw]">
+                    class="flex items-center justify-center h-[9.9vw] rounded-[200px] bg-opacity-20 bg-[#fff] font-[800] w-[30vw] text-[#f8fefe] text-[3vw]">
                     <Icon icon="entypo:forward" class="text-[5vw] mr-[1.8vw] iconify iconify--majesticons" />
                     {{ playlist.playlist.subscribedCount }}
                 </li>
                 <li
-                    class="flex items-center justify-center h-[9.9vw] rounded-[200px] bg-opacity-20 bg-[#fff] font-[800] flex-1 text-[#f8fefe] text-[3vw]">
+                    class="flex items-center justify-center h-[9.9vw] rounded-[200px] bg-opacity-20 bg-[#fff] font-[800] w-[30vw] text-[#f8fefe] text-[3vw]">
                     <Icon icon="iconamoon:comment-dots-light" class="text-[5vw] mr-[1.8vw] iconify iconify--majesticons" />
                     {{ playlist.playlist.shareCount }}
                 </li>
                 <li
-                    class="flex items-center justify-center h-[9.9vw] rounded-[200px] bg-[#ff2658] font-[800] flex-1 text-[#f8fefe] text-[3vw]">
+                    class="flex items-center justify-center h-[9.9vw] rounded-[200px] bg-[#ff2658] font-[800] w-[30vw] text-[#f8fefe] text-[3vw]">
                     <Icon icon="fluent:collections-add-24-regular"
                         class="text-[5vw] mr-[1.8vw] iconify iconify--majesticons" />
                     {{ playlist.playlist.commentCount }}
@@ -111,7 +111,6 @@ export default {
     props: ["playlist", "recommendations"],
     created() {
         // console.log(this.playlist);
-
     },
     updated() {
         this.init()

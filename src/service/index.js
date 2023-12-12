@@ -171,3 +171,7 @@ export const getSongDetail = (ids) => {
     console.log(ids);
     return co(request.get(`/song/detail?timestamp=${Date.now()}`, { params: { ids } }));
 }
+
+
+// 音乐评论
+export const postCommentMusic = (data) => co(request.post(`/comment/music?timestamp=${Date.now()}`, data));

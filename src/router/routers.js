@@ -7,6 +7,7 @@ import Playlist from "@/views/Playlist/index.vue"
 import login from "@/views/login/index.vue"
 import myUrl from "@/components/myCharts/mv.vue"
 import audioPlay from "@/views/audioPlay/index.vue"
+import comment from "@/views/comment/index.vue"
 export default [
     {
         path:"/",
@@ -57,4 +58,9 @@ export default [
         name:"audioPlay",
         component:audioPlay
     },
+    {
+        path:"/comment",
+        name:"comment",
+        component:comment
+    }
 ]

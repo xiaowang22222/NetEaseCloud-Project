@@ -29,5 +29,5 @@ Vue.component("routerfoot",routerfoot)
 new Vue({
   render: h => h(App),
   router,
-  store
+  store,
 }).$mount('#app')

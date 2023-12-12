@@ -16,6 +16,7 @@ export default class {
         this.playing = false, //播放器的播放状态
         this.duration = 0, //播放总时长
         this.progress = 0 //播放进度
+        this.listOfPlaylistDetails =[]
     }
     interval() {
         clearInterval(timer)

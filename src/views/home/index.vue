@@ -1,13 +1,12 @@
 <template>
     <div class="bg-[#F4F4F4] ">
-        <div class="h-[89vh] overflow-auto">
+        <div class="h-[95vh] overflow-auto">
             <seach :auth="auth"></seach>
             <Homesiwper></Homesiwper>
             <horizontal></horizontal>
             <home v-for="block in blocks" :key="block.blockCode" :reource="block"></home>
         </div>
         <routerfoot></routerfoot>
-
     </div>
 </template>
 
