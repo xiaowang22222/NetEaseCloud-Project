@@ -1,8 +1,8 @@
 <template>
     <div class="dark:bg-[#454545] dark:text-[#fff]">
-        <van-tabs v-model="active" :background="$store.state.is_dask ? 'white' : '#454545'"
-            :title-inactive-color="$store.state.is_dask ? '#d3d6dc' : '#2f2a30'"
-            :title-active-color="$store.state.is_dask ? '#fff' : '#000'">
+        <van-tabs v-model="active" :background="$store.state.show ? '#454545' : ' white'"
+            :title-inactive-color="$store.state.show ? '#d3d6dc' : '#2f2a30'"
+            :title-active-color="$store.state.show ? '#fff' : '#000'">
             <van-tab title="内地">
                 <div class="van-tab__pane">
                     <div class="overflow-auto px-[4vw] h-[82vh]">
