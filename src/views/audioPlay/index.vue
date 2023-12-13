@@ -100,21 +100,88 @@
                             </path>
                         </svg>
                     </router-link>
+
+                    <svg data-v-8298fe8a="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 24 24"
+                        class="text-[6vw] text-[#fff] iconify iconify--ri">
+                        <path fill="currentColor"
+                            d="M12 3c-.825 0-1.5.675-1.5 1.5S11.175 6 12 6s1.5-.675 1.5-1.5S12.825 3 12 3Zm0 15c-.825 0-1.5.675-1.5 1.5S11.175 21 12 21s1.5-.675 1.5-1.5S12.825 18 12 18Zm0-7.5c-.825 0-1.5.675-1.5 1.5s.675 1.5 1.5 1.5s1.5-.675 1.5-1.5s-.675-1.5-1.5-1.5Z">
+
+                        </path>
+                    </svg>
+
+                </div>
+                <!-- 进度条 -->
+                <div data-v-8298fe8a="" class="h-[8vw] w-[100vw] flex items-center px-[5vw] mt-[3vw]">
+                    <div data-v-8298fe8a="" class="text-[#000] text-[3vw] scale-[0.8] opacity-80">{{
+                        timecl(mixin_player.howl.seek()) }}</div>
+
+                    <div data-v-8298fe8a="" class="flex-1 mx-[2.5vw] vue-slider vue-slider-ltr"
+                        style="padding: 7px 0px; width: auto; height: 4px;">
+                        <vue-slider tooltip="always" v-model="mixin_player.time" :lazy="true"
+                            @change="changetime(mixin_player.time)" :min="0"
+                            :max="mixin_player.howl.duration() == 0 ? 1 : mixin_player.howl.duration()" :interval="0.01"
+                            :tooltip-style="tooltipStyle"></vue-slider>
+                    </div>
+                    <div data-v-8298fe8a="" class="text-[#000] text-[3vw] scale-[0.8] opacity-50">{{
+                        timecl(mixin_player.howl.duration()) }}</div>
+                </div>
+                <!-- 播放部分 -->
+                <div data-v-8298fe8a="" class="h-[12.3vw] flex w-[100vw] items-center justify-evenly"><svg
+                        data-v-8298fe8a="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 256 256"
+                        class="text-[#fff] text-[8vw] iconify iconify--fad">
+                        <g fill="currentColor" fill-rule="evenodd">
+                            <path
+                                d="M109.533 197.602a1.887 1.887 0 0 1-.034 2.76l-7.583 7.066a4.095 4.095 0 0 1-5.714-.152l-32.918-34.095c-1.537-1.592-1.54-4.162-.002-5.746l33.1-34.092c1.536-1.581 4.11-1.658 5.74-.18l7.655 6.94c.82.743.833 1.952.02 2.708l-21.11 19.659s53.036.129 71.708.064c18.672-.064 33.437-16.973 33.437-34.7c0-7.214-5.578-17.64-5.578-17.64c-.498-.99-.273-2.444.483-3.229l8.61-8.94c.764-.794 1.772-.632 2.242.364c0 0 9.212 18.651 9.212 28.562c0 28.035-21.765 50.882-48.533 50.882c-26.769 0-70.921.201-70.921.201l20.186 19.568z">
+                            </path>
+                            <path
+                                d="M144.398 58.435a1.887 1.887 0 0 1 .034-2.76l7.583-7.066a4.095 4.095 0 0 1 5.714.152l32.918 34.095c1.537 1.592 1.54 4.162.002 5.746l-33.1 34.092c-1.536 1.581-4.11 1.658-5.74.18l-7.656-6.94c-.819-.743-.832-1.952-.02-2.708l21.111-19.659s-53.036-.129-71.708-.064c-18.672.064-33.437 16.973-33.437 34.7c0 7.214 5.578 17.64 5.578 17.64c.498.99.273 2.444-.483 3.229l-8.61 8.94c-.764.794-1.772.632-2.242-.364c0 0-9.212-18.65-9.212-28.562c0-28.035 21.765-50.882 48.533-50.882c26.769 0 70.921-.201 70.921-.201l-20.186-19.568z">
+                            </path>
+                        </g>
+                    </svg>
+                    <div @click="previousSong">
+                        <svg data-v-8298fe8a="" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em"
+                            height="1em" viewBox="0 0 16 16" class="text-[#fff] iconify iconify--fluent">
+                            <path fill="currentColor"
+                                d="M14 3.002a1 1 0 0 0-1.578-.816l-7 4.963a1 1 0 0 0-.007 1.628l7 5.037A1 1 0 0 0 14 13.003V3.002ZM2 2.5a.5.5 0 0 1 1 0v11a.5.5 0 0 1-1 0v-11Z">
+                            </path>
+                        </svg>
+                    </div>
+                    <div class="w-[12vw] h-[12vw] rounded-[50%] bg-[#fff] flex items-center justify-center"
+                        @click="mixin_player.toggle()">
+                        <div v-if="mixin_player.playing">
+
+                            <Icon icon="ph:pause-thin" />
+                        </div>
+                        <div v-else>
+                            <Icon icon="solar:playback-speed-broken" />
+                        </div>
+                    </div>
+                    <div @click="nextSong">
+                        <svg data-v-8298fe8a="" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em"
+                            height="1em" viewBox="0 0 20 20" class="text-[#fff] iconify iconify--fluent">
+                            <path fill="currentColor"
+                                d="M3 4.252c0-1 1.116-1.595 1.947-1.038l8.499 5.707a1.25 1.25 0 0 1 .007 2.071l-8.5 5.793A1.25 1.25 0 0 1 3 15.752v-11.5ZM17 3.5a.5.5 0 0 0-1 0v13a.5.5 0 1 0 1 0v-13Z">
+                            </path>
+                        </svg>
+                    </div>
                     <div @click.stop="showPopup">
                         <svg data-v-8298fe8a="" xmlns="http://www.w3.org/2000/svg"
                             xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em"
-                            height="1em" viewBox="0 0 24 24" class="text-[6vw] text-[#fff] iconify iconify--ri">
-                            <path fill="currentColor"
-                                d="M12 3c-.825 0-1.5.675-1.5 1.5S11.175 6 12 6s1.5-.675 1.5-1.5S12.825 3 12 3Zm0 15c-.825 0-1.5.675-1.5 1.5S11.175 21 12 21s1.5-.675 1.5-1.5S12.825 18 12 18Zm0-7.5c-.825 0-1.5.675-1.5 1.5s.675 1.5 1.5 1.5s1.5-.675 1.5-1.5s-.675-1.5-1.5-1.5Z">
-
-                            </path>
+                            height="1em" viewBox="0 0 24 24" class="text-[6vw] text-[#fff] iconify iconify--iconamoon">
+                            <path fill="currentColor" fill-rule="evenodd"
+                                d="M7 6a1 1 0 0 1-.5.866l-3 1.732A1 1 0 0 1 2 7.732V4.268a1 1 0 0 1 1.5-.866l3 1.732A1 1 0 0 1 7 6Zm-4 5a1 1 0 1 0 0 2h18a1 1 0 1 0 0-2H3Zm6-5a1 1 0 0 1 1-1h11a1 1 0 1 1 0 2H10a1 1 0 0 1-1-1ZM3 17a1 1 0 1 0 0 2h18a1 1 0 1 0 0-2H3Z"
+                                clip-rule="evenodd"></path>
                         </svg>
                     </div>
                     <van-popup v-model="show" position="bottom" :style="{ height: '40%' }">
                         <div class="pl-[5vw] pr-[5vw]">
                             <div data-v-36d9f586="" class="playmusic py-[6vw]">
                                 <h1 data-v-36d9f586="" class="text-[4vw] font-extrabold">
-                                    当前播放 <span data-v-36d9f586="" class="text-[2vw] text-[#929293]">(35) </span></h1>
+                                    当前播放 <span data-v-36d9f586="" class="text-[2vw] text-[#929293]">{{ mixin_player.tracks.length }} </span></h1>
                                 <div data-v-36d9f586="" class="flex justify-between mt-[6.6vw] items-center">
                                     <div data-v-36d9f586="" class="flex"><svg data-v-36d9f586=""
                                             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -164,7 +231,9 @@
                             </div>
                             <div>
                                 <div data-v-36d9f586="" class="flex justify-between items-center h-[14vw] "
-                                    v-for="item in mixin_player.listOfPlaylistDetails" :key="item.id"
+                                    v-for="(item,index) in mixin_player.listOfPlaylistDetails" 
+                                    :class="{'red':index==mixin_player.index}"
+                                    :key="item.id"
                                     @click.stop="qie(item)">
                                     <div data-v-36d9f586="" class="flex items-center"><!---->
                                         <div data-v-36d9f586="" class="text-[4.1vw] ml-[2vw] w-[60vw] line-clamp-1"><!---->
@@ -189,65 +258,6 @@
                             </div>
                         </div>
                     </van-popup>
-                </div>
-                <!-- 进度条 -->
-                <div data-v-8298fe8a="" class="h-[8vw] w-[100vw] flex items-center px-[5vw] mt-[3vw]">
-                    <div data-v-8298fe8a="" class="text-[#000] text-[3vw] scale-[0.8] opacity-80">{{
-                         timecl(mixin_player.howl.seek())}}</div>
-                        
-                    <div data-v-8298fe8a="" class="flex-1 mx-[2.5vw] vue-slider vue-slider-ltr"
-                        style="padding: 7px 0px; width: auto; height: 4px;">
-                        <vue-slider tooltip="always" v-model="mixin_player.time" :lazy="true"
-                            @change="changetime(mixin_player.time)" :min="0"
-                            :max="mixin_player.howl.duration() == 0 ? 1 : mixin_player.howl.duration()" :interval="0.01"
-                            :tooltip-style="tooltipStyle"></vue-slider>
-                    </div>
-                    <div data-v-8298fe8a="" class="text-[#000] text-[3vw] scale-[0.8] opacity-50">{{
-                       timecl(mixin_player.howl.duration())  }}</div>
-                </div>
-                <!-- 播放部分 -->
-                <div data-v-8298fe8a="" class="h-[12.3vw] flex w-[100vw] items-center justify-evenly"><svg
-                        data-v-8298fe8a="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                        aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 256 256"
-                        class="text-[#fff] text-[8vw] iconify iconify--fad">
-                        <g fill="currentColor" fill-rule="evenodd">
-                            <path
-                                d="M109.533 197.602a1.887 1.887 0 0 1-.034 2.76l-7.583 7.066a4.095 4.095 0 0 1-5.714-.152l-32.918-34.095c-1.537-1.592-1.54-4.162-.002-5.746l33.1-34.092c1.536-1.581 4.11-1.658 5.74-.18l7.655 6.94c.82.743.833 1.952.02 2.708l-21.11 19.659s53.036.129 71.708.064c18.672-.064 33.437-16.973 33.437-34.7c0-7.214-5.578-17.64-5.578-17.64c-.498-.99-.273-2.444.483-3.229l8.61-8.94c.764-.794 1.772-.632 2.242.364c0 0 9.212 18.651 9.212 28.562c0 28.035-21.765 50.882-48.533 50.882c-26.769 0-70.921.201-70.921.201l20.186 19.568z">
-                            </path>
-                            <path
-                                d="M144.398 58.435a1.887 1.887 0 0 1 .034-2.76l7.583-7.066a4.095 4.095 0 0 1 5.714.152l32.918 34.095c1.537 1.592 1.54 4.162.002 5.746l-33.1 34.092c-1.536 1.581-4.11 1.658-5.74.18l-7.656-6.94c-.819-.743-.832-1.952-.02-2.708l21.111-19.659s-53.036-.129-71.708-.064c-18.672.064-33.437 16.973-33.437 34.7c0 7.214 5.578 17.64 5.578 17.64c.498.99.273 2.444-.483 3.229l-8.61 8.94c-.764.794-1.772.632-2.242-.364c0 0-9.212-18.65-9.212-28.562c0-28.035 21.765-50.882 48.533-50.882c26.769 0 70.921-.201 70.921-.201l-20.186-19.568z">
-                            </path>
-                        </g>
-                    </svg> <svg data-v-8298fe8a="" xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em"
-                        viewBox="0 0 16 16" class="text-[#fff] iconify iconify--fluent">
-                        <path fill="currentColor"
-                            d="M14 3.002a1 1 0 0 0-1.578-.816l-7 4.963a1 1 0 0 0-.007 1.628l7 5.037A1 1 0 0 0 14 13.003V3.002ZM2 2.5a.5.5 0 0 1 1 0v11a.5.5 0 0 1-1 0v-11Z">
-                        </path>
-                    </svg>
-                    <div class="w-[12vw] h-[12vw] rounded-[50%] bg-[#fff] flex items-center justify-center"
-                        @click="mixin_player.toggle()">
-                        <div v-if="mixin_player.playing">
-
-                            <Icon icon="ph:pause-thin" />
-                        </div>
-                        <div v-else>
-                            <Icon icon="solar:playback-speed-broken" />
-                        </div>
-                    </div>
-                    <svg data-v-8298fe8a="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                        aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 20 20"
-                        class="text-[#fff] iconify iconify--fluent">
-                        <path fill="currentColor"
-                            d="M3 4.252c0-1 1.116-1.595 1.947-1.038l8.499 5.707a1.25 1.25 0 0 1 .007 2.071l-8.5 5.793A1.25 1.25 0 0 1 3 15.752v-11.5ZM17 3.5a.5.5 0 0 0-1 0v13a.5.5 0 1 0 1 0v-13Z">
-                        </path>
-                    </svg> <svg data-v-8298fe8a="" xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em"
-                        viewBox="0 0 24 24" class="text-[6vw] text-[#fff] iconify iconify--iconamoon">
-                        <path fill="currentColor" fill-rule="evenodd"
-                            d="M7 6a1 1 0 0 1-.5.866l-3 1.732A1 1 0 0 1 2 7.732V4.268a1 1 0 0 1 1.5-.866l3 1.732A1 1 0 0 1 7 6Zm-4 5a1 1 0 1 0 0 2h18a1 1 0 1 0 0-2H3Zm6-5a1 1 0 0 1 1-1h11a1 1 0 1 1 0 2H10a1 1 0 0 1-1-1ZM3 17a1 1 0 1 0 0 2h18a1 1 0 1 0 0-2H3Z"
-                            clip-rule="evenodd"></path>
-                    </svg>
                 </div>
             </div>
         </div>
@@ -287,13 +297,26 @@ export default {
             this.mixin_player.replaceTracks(this.mixin_player.tracks, a.id)
         },
         timecl(time) {
-            time=Math.round(time)
+            time = Math.round(time)
             if (time < 10) return `00:0${time}`
             else if (time < 60) return `00:${time}`
             else if (time % 60 < 10) return `${Math.floor(time / 60)}:0${time % 60}`
             else return `${Math.floor(time / 60)}:${time % 60}`
+        },
+        previousSong() {
+            let index = this.mixin_player.tracks.indexOf(this.mixin_player.CurrentTrackDetails.id)
+            if (index - 1 <= -1) {
+                index = this.mixin_player.tracks.length
+            }
+            this.mixin_player.replaceTracks(this.mixin_player.tracks, this.mixin_player.tracks[index - 1])
+        },
+        nextSong() {
+            let index = this.mixin_player.tracks.indexOf(this.mixin_player.CurrentTrackDetails.id)
+            if (index + 1 > this.mixin_player.tracks.length - 1) {
+                index = -1
+            }
+            this.mixin_player.replaceTracks(this.mixin_player.tracks, this.mixin_player.tracks[index + 1])
         }
-
     }
 }
 </script>
@@ -313,5 +336,9 @@ export default {
     height: 100%;
     background-color: rgba(183, 183, 183, 0.5);
     filter: blur(50vw);
+}
+
+.red{
+    color: red;
 }
 </style>

@@ -12,11 +12,11 @@
         </div>
         <!-- <video :src="urlPath.url" class="h-[38vh] w-[100vw]" muted autoplay="autoplay" >
         </video> -->
-        <!-- <div v-if="urlPath"> -->
-            <video ref="player" muted autoplay >
+        <div v-if="urlPath">
+            <video ref="player" muted autoplay controls>
                 <source :src="urlPath.url" type="video/mp4" />
             </video>
-        <!-- </div> -->
+        </div>
         <div class="w-[100vw]  relative flex justify-start flex-col items-end">
             <div class="flex flex-col justify-center items-center  mb-[4vw] pr-[4vw]">
                 <Icon icon="streamline:like-1-solid" color="white"

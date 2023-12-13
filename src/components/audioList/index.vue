@@ -87,12 +87,12 @@
                     </div>
                 </div>
                 <div>
-                    <div data-v-36d9f586="" class="flex justify-between items-center h-[14vw] " v-for="item in playlist"
+                    <div data-v-36d9f586="" class="flex justify-between items-center h-[14vw] " :class="{'red':index==mixin_player.index}" v-for="(item,index) in playlist"
                         :key="item.id" @click.stop="qie(item)">
                         <div data-v-36d9f586="" class="flex items-center"><!---->
-                            <div data-v-36d9f586="" class="text-[4.1vw] ml-[2vw] w-[60vw] line-clamp-1"><!----> <!---->
+                            <div data-v-36d9f586="" class="text-[4.1vw] ml-[2vw] w-[60vw] line-clamp-1" :class="{'red':index==mixin_player.index}"><!----> <!---->
                                 {{ item.al.name }}
-                                <span data-v-36d9f586="" class="text-[3vw] text-[#BCBCBC]">{{ item.ar[0].name }}</span>
+                                <span data-v-36d9f586="" class="text-[3vw] text-[#BCBCBC]" :class="{'red':index==mixin_player.index}">{{ item.ar[0].name }}</span>
                             </div>
                         </div>
                         <div data-v-36d9f586="" class="flex items-center"><!----> <svg data-v-36d9f586=""
@@ -153,4 +153,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped>
+    .red{
+        color: red;
+    }
+</style>

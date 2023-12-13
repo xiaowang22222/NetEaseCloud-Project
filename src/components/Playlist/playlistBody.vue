@@ -42,18 +42,19 @@
             }"> -->
             <div v-for="item, index in playlist"  @click.stop="obtain(index)" 
                 class="flex px-[4vw] h-[15vw] flex-wrap content-center justify-between"
+                :class="{'red':index==mixin_player.index}"
                  :key="item.id">
                 <div class="flex">
                     <div class="h-[100%] flex items-center">
 
-                        <span class="text-[3.5vw] text-gray-400 w-[8vw] ">{{ index + 1 }}</span>
+                        <span class="text-[3.5vw] text-gray-400 w-[8vw] " :class="{'red':index==mixin_player.index}">{{ index + 1 }}</span>
                     </div>
 
                     <div class="flex flex-col ">
                         <div class="w-[65vw] overflow-hidden h-[4.5vw]">
-                            <span class="text-[3.5vw] h-[4vw] overflow-hidden w-[70vw] flex items-center ">{{ item.name
+                            <span class="text-[3.5vw] h-[4vw] overflow-hidden w-[70vw] flex items-center" :class="{'red':index==mixin_player.index}">{{ item.name
                             }}</span>
-                            <span v-if="item.alia[0]" class="text-[3.5vw] h-[4vw] overflow-hidden w-[70vw] ">({{
+                            <span v-if="item.alia[0]" class="text-[3.5vw] h-[4vw] overflow-hidden w-[70vw]" :class="{'red':index==mixin_player.index}">({{
                                 item.alia[0] }})</span>
                         </div>
                         <div class="w-[50vw] flex items-center mt-[1vw] overflow-hidden">
@@ -64,7 +65,7 @@
                                     class="w-[8.5vw] h-[6vw] rounded-[3px] border-[1px] border-[#60BDEF] text-[3vw] text-[#60BDEF] text-center leading-[6vw] scale-50 ml-[-2vw] mr-[-1vw]">试听</span>
 
                             </div>
-                            <span class="text-[3vw] text-gray-400 h-[4vw] overflow-hidden ">{{ item.ar[0].name }}-{{
+                            <span class="text-[3vw] text-gray-400 h-[4vw] overflow-hidden" :class="{'red':index==mixin_player.index}">{{ item.ar[0].name }}-{{
                                 item.al.name }}</span>
                         </div>
                     </div>
@@ -134,5 +135,9 @@ export default {
 <style scoped>
 .a1 {
     background-color: white;
+}
+
+.red{
+    color: red;
 }
 </style>
