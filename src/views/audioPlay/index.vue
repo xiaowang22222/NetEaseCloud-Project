@@ -127,19 +127,26 @@
                         timecl(mixin_player.howl.duration()) }}</div>
                 </div>
                 <!-- 播放部分 -->
-                <div data-v-8298fe8a="" class="h-[12.3vw] flex w-[100vw] items-center justify-evenly"><svg
-                        data-v-8298fe8a="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                        aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 256 256"
-                        class="text-[#fff] text-[8vw] iconify iconify--fad">
-                        <g fill="currentColor" fill-rule="evenodd">
-                            <path
-                                d="M109.533 197.602a1.887 1.887 0 0 1-.034 2.76l-7.583 7.066a4.095 4.095 0 0 1-5.714-.152l-32.918-34.095c-1.537-1.592-1.54-4.162-.002-5.746l33.1-34.092c1.536-1.581 4.11-1.658 5.74-.18l7.655 6.94c.82.743.833 1.952.02 2.708l-21.11 19.659s53.036.129 71.708.064c18.672-.064 33.437-16.973 33.437-34.7c0-7.214-5.578-17.64-5.578-17.64c-.498-.99-.273-2.444.483-3.229l8.61-8.94c.764-.794 1.772-.632 2.242.364c0 0 9.212 18.651 9.212 28.562c0 28.035-21.765 50.882-48.533 50.882c-26.769 0-70.921.201-70.921.201l20.186 19.568z">
-                            </path>
-                            <path
-                                d="M144.398 58.435a1.887 1.887 0 0 1 .034-2.76l7.583-7.066a4.095 4.095 0 0 1 5.714.152l32.918 34.095c1.537 1.592 1.54 4.162.002 5.746l-33.1 34.092c-1.536 1.581-4.11 1.658-5.74.18l-7.656-6.94c-.819-.743-.832-1.952-.02-2.708l21.111-19.659s-53.036-.129-71.708-.064c-18.672.064-33.437 16.973-33.437 34.7c0 7.214 5.578 17.64 5.578 17.64c.498.99.273 2.444-.483 3.229l-8.61 8.94c-.764.794-1.772.632-2.242-.364c0 0-9.212-18.65-9.212-28.562c0-28.035 21.765-50.882 48.533-50.882c26.769 0 70.921-.201 70.921-.201l-20.186-19.568z">
-                            </path>
-                        </g>
-                    </svg>
+                <div data-v-8298fe8a="" class="h-[12.3vw] flex w-[100vw] items-center justify-evenly">
+                    <div @click="singleTuneCirculation">
+                        <div v-if="mixin_player.loopMode == 0">
+                            <Icon icon="solar:repeat-one-line-duotone" class="text-[#fff] text-[8vw]"/>
+                        </div>
+                        <div v-if="mixin_player.loopMode==1">
+                            <svg data-v-8298fe8a="" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em"
+                                height="1em" viewBox="0 0 256 256" class="text-[#fff] text-[8vw] iconify iconify--fad">
+                                <g fill="currentColor" fill-rule="evenodd">
+                                    <path
+                                        d="M109.533 197.602a1.887 1.887 0 0 1-.034 2.76l-7.583 7.066a4.095 4.095 0 0 1-5.714-.152l-32.918-34.095c-1.537-1.592-1.54-4.162-.002-5.746l33.1-34.092c1.536-1.581 4.11-1.658 5.74-.18l7.655 6.94c.82.743.833 1.952.02 2.708l-21.11 19.659s53.036.129 71.708.064c18.672-.064 33.437-16.973 33.437-34.7c0-7.214-5.578-17.64-5.578-17.64c-.498-.99-.273-2.444.483-3.229l8.61-8.94c.764-.794 1.772-.632 2.242.364c0 0 9.212 18.651 9.212 28.562c0 28.035-21.765 50.882-48.533 50.882c-26.769 0-70.921.201-70.921.201l20.186 19.568z">
+                                    </path>
+                                    <path
+                                        d="M144.398 58.435a1.887 1.887 0 0 1 .034-2.76l7.583-7.066a4.095 4.095 0 0 1 5.714.152l32.918 34.095c1.537 1.592 1.54 4.162.002 5.746l-33.1 34.092c-1.536 1.581-4.11 1.658-5.74.18l-7.656-6.94c-.819-.743-.832-1.952-.02-2.708l21.111-19.659s-53.036-.129-71.708-.064c-18.672.064-33.437 16.973-33.437 34.7c0 7.214 5.578 17.64 5.578 17.64c.498.99.273 2.444-.483 3.229l-8.61 8.94c-.764.794-1.772.632-2.242-.364c0 0-9.212-18.65-9.212-28.562c0-28.035 21.765-50.882 48.533-50.882c26.769 0 70.921-.201 70.921-.201l-20.186-19.568z">
+                                    </path>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
                     <div @click="previousSong">
                         <svg data-v-8298fe8a="" xmlns="http://www.w3.org/2000/svg"
                             xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em"
@@ -181,7 +188,8 @@
                         <div class="pl-[5vw] pr-[5vw]">
                             <div data-v-36d9f586="" class="playmusic py-[6vw]">
                                 <h1 data-v-36d9f586="" class="text-[4vw] font-extrabold">
-                                    当前播放 <span data-v-36d9f586="" class="text-[2vw] text-[#929293]">{{ mixin_player.tracks.length }} </span></h1>
+                                    当前播放 <span data-v-36d9f586="" class="text-[2vw] text-[#929293]">{{
+                                        mixin_player.tracks.length }} </span></h1>
                                 <div data-v-36d9f586="" class="flex justify-between mt-[6.6vw] items-center">
                                     <div data-v-36d9f586="" class="flex"><svg data-v-36d9f586=""
                                             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -231,10 +239,8 @@
                             </div>
                             <div>
                                 <div data-v-36d9f586="" class="flex justify-between items-center h-[14vw] "
-                                    v-for="(item,index) in mixin_player.listOfPlaylistDetails" 
-                                    :class="{'red':index==mixin_player.index}"
-                                    :key="item.id"
-                                    @click.stop="qie(item)">
+                                    v-for="(item, index) in mixin_player.listOfPlaylistDetails"
+                                    :class="{ 'red': index == mixin_player.index }" :key="item.id" @click.stop="qie(item)">
                                     <div data-v-36d9f586="" class="flex items-center"><!---->
                                         <div data-v-36d9f586="" class="text-[4.1vw] ml-[2vw] w-[60vw] line-clamp-1"><!---->
                                             <!---->
@@ -316,6 +322,15 @@ export default {
                 index = -1
             }
             this.mixin_player.replaceTracks(this.mixin_player.tracks, this.mixin_player.tracks[index + 1])
+        },
+        singleTuneCirculation() {
+            if (this.mixin_player.loopMode == 0) {
+                this.mixin_player.loopMode = 1
+                console.log(this.mixin_player.loopMode);
+            } else {
+                this.mixin_player.loopMode = 0
+                console.log(this.mixin_player.loopMode);
+            }
         }
     }
 }
@@ -338,7 +353,7 @@ export default {
     filter: blur(50vw);
 }
 
-.red{
+.red {
     color: red;
 }
 </style>
