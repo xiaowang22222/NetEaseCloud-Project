@@ -3,7 +3,7 @@
         <!-- 头部 -->
 
         <!-- 歌单名称 -->
-        <div class="h-[43vw] transition-all duration-20 0 relative from-[#486D8D] to-[#6186AB] pb-[5vw] pl-[3.9vw] pr-[3.4vw] pt-[4.5vw]"
+        <div class="h-[43vw] transition-all duration-20 0 relative from-[#486D8D] to-[#6186AB] pb-[5vw] pl-[3.9vw] pr-[3.4vw] pt-[4.5vw] dark:bg-[#454545]"
             v-show="show">
             <div class="h-[29vw] flex pt-[3.5vw] justify-between">
                 <div class="w-[24vw] h-[25vw] pt-[1vw] relative">
@@ -75,8 +75,8 @@
                 v-show="!show" />
             <Icon icon="eva:arrow-ios-downward-fill" class="text-[3vw] mt-[0.5vw] iconify iconify--ep" v-show="show" />
         </div>
-        <div>
-            <ul class="flex items-center justify-around">
+        <div class="dark:bg-[#454545]">
+            <ul class="flex items-center justify-around dark:bg-[#454545]">
                 <li
                     class="flex items-center justify-center h-[9.9vw] rounded-[200px] bg-opacity-20 bg-[#fff] font-[800] w-[30vw] text-[#f8fefe] text-[3vw]">
                     <Icon icon="entypo:forward" class="text-[5vw] mr-[1.8vw] iconify iconify--majesticons" />

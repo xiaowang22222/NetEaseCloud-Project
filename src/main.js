@@ -15,6 +15,11 @@ import audioList from "@/components/audioList/index.vue"
 import routerfoot from "@/components/routerfoot/index.vue"
 import audioPlay from '@/views/audioPlay/index.js';
 import * as Sentry from "@sentry/vue";
+import VueSlider from 'vue-slider-component'
+import 'vue-slider-component/theme/default.css'
+Vue.component('VueSlider', VueSlider)
+
+
 Sentry.init({
   Vue,
   dsn: "https://de0aa59e21b71e309c2e037ec7e43028@o4506386913624064.ingest.sentry.io/4506386975424512",

@@ -1,16 +1,16 @@
 <template>
-    <div class="w-[100%] h-[100vh] z-[100] relative">
+    <div class="w-[100%] h-[100vh] z-[100] relative dark:bg-[#454545]">
         <van-sticky>
             <van-button type="primary">
-                <div class="playlist_assembly w-[100vw] ml-[-4vw]">
+                <div class="playlist_assembly w-[100vw] ml-[-4vw] dark:bg-[#454545]">
                     <div class="h-[8vw]">
-                        <div class="playlist_header_header pl-[5vw]">
+                        <div class="playlist_header_header pl-[5vw] dark:bg-[#454545]">
                             <div class="playlist_header_left flex justify-between" @click="back">
                                 <Icon icon="teenyicons:arrow-left-outline" class="" />
-                                <div class="w-[30vw] h-[10vw] overflow-hidden relative">
+                                <div class="w-[30vw] h-[10vw] overflow-hidden relative ">
                                     <p class="absolute top-[3vw] left-7" :class="{ micuelist: show }">歌单</p>
                                     <van-notice-bar scrollable :text="playlist.playlist.name" color='#fff'
-                                        background="#6186AB" class=" {absolute w-[70vw] h-[10vw] top-[8vw]"
+                                        background="#6186AB" class="absolute w-[70vw] h-[10vw] top-[8vw] dark:bg-[#454545]"
                                         :class="{ micuelist1: show1 }" />
                                 </div>
                             </div>

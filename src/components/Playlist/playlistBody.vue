@@ -1,8 +1,8 @@
 <template>
-    <div class=" bg-white">
+    <div class=" bg-white dark:bg-[#454545]">
         <van-sticky :offset-top="10 + 'vw'">
-            <div class="header flex px-[4vw] justify-between bg-white">
-                <div class="flex items-center">
+            <div class="header flex px-[4vw] justify-between bg-white dark:bg-[#454545]">
+                <div class="flex items-center ">
                     <div>
                         <svg class="w-[6vw] text-red-600" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
                             viewBox="0 0 32 32">
@@ -12,7 +12,7 @@
                                 d="M16 2a14 14 0 1 0 14 14A14 14 0 0 0 16 2Zm7.447 14.895l-12 6A1 1 0 0 1 10 22V10a1 1 0 0 1 1.447-.894l12 6a1 1 0 0 1 0 1.788Z" />
                         </svg>
                     </div>
-                    <div class="ml-[3vw]">
+                    <div class="ml-[3vw] ">
                         <span class="text-[4vw] text-gray-700" @click.stop="playAll">播放全部</span>
                         <span class=" ml-[1vw] text-[3vw] text-gray-500">({{  playlist.length  }})</span>
                     </div>
@@ -41,7 +41,8 @@
                 }
             }"> -->
             <div v-for="item, index in playlist"  @click.stop="obtain(index)" 
-                class="flex px-[4vw] h-[15vw] flex-wrap content-center justify-between" :key="item.id">
+                class="flex px-[4vw] h-[15vw] flex-wrap content-center justify-between"
+                 :key="item.id">
                 <div class="flex">
                     <div class="h-[100%] flex items-center">
 
@@ -88,7 +89,7 @@
             <!-- </router-link> -->
         </div>
         <div class="h-[20vw]"></div>
-        <audioList1 class="w-[100%] fixed bottom-0 left-0 h-[10vw] opacity-100 bg-[black] z-[100]" v-if="flag" :playlist="playlist"></audioList1>
+        <audioList1 class="w-[100%] fixed bottom-0 left-0 h-[10vw] opacity-100 bg-[black] z-[100] " v-if="flag" :playlist="playlist"></audioList1>
     </div>
 </template>
 
@@ -97,7 +98,6 @@ import audioList1 from "@/components/audioList/index.vue"
 export default {
     data() {
         return {
-            num: null,
             flag:false
         }
     },
@@ -113,7 +113,6 @@ export default {
     },
     methods: {
         obtain(index) {
-            this.num = index  
             // console.log(this.playlist);
             let arr = []
             for (let index = 0; index < this.playlist.length; index++) {

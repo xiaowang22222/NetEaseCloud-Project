@@ -16,12 +16,14 @@ export default class {
         this.playing = false, //播放器的播放状态
         this.duration = 0, //播放总时长
         this.progress = 0 //播放进度
-        this.listOfPlaylistDetails =[]
+        this.listOfPlaylistDetails =[],
+        this.time=0
     }
     interval() {
         clearInterval(timer)
         timer = setInterval(()=>{
             this.progress = this.howl.seek() / this.howl.duration() //获取当前播放进度
+            this.time = this.howl.seek()
         },1000)
     }
 

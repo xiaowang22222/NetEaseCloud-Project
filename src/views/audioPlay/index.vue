@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="bg-[#ccc]">
         <div class="absolute w-[100vw] h-[100vh] bgImg "
             :style="{ backgroundImage: 'url(' + mixin_player.CurrentTrackDetails.al.picUrl + ')' }">
             <div></div>
@@ -192,21 +192,18 @@
                 </div>
                 <!-- 进度条 -->
                 <div data-v-8298fe8a="" class="h-[8vw] w-[100vw] flex items-center px-[5vw] mt-[3vw]">
-                    <div data-v-8298fe8a="" class="text-[#fff] text-[1.6vw] scale-[0.8] opacity-80">00:00</div>
+                    <div data-v-8298fe8a="" class="text-[#000] text-[3vw] scale-[0.8] opacity-80">{{
+                         timecl(mixin_player.howl.seek())}}</div>
+                        
                     <div data-v-8298fe8a="" class="flex-1 mx-[2.5vw] vue-slider vue-slider-ltr"
                         style="padding: 7px 0px; width: auto; height: 4px;">
-                        <div class="vue-slider-rail">
-                            <div class="vue-slider-process"
-                                style="height: 100%; top: 0px; left: 0%; width: 0%; transition-property: width, left; transition-duration: 0s;">
-                            </div>
-                            <!-- <div aria-valuetext="0" class="vue-slider-dot" role="slider" aria-valuenow="0" aria-valuemin="0"
-                                aria-valuemax="199.8" aria-orientation="horizontal" tabindex="0"
-                                style="width: 14px; height: 14px; transform: translate(-50%, -50%); top: 50%; left: 0%; transition: left 0s ease 0s;">
-                                <div class="vue-slider-dot-handle"></div>
-                            </div> -->
-                        </div>
+                        <vue-slider tooltip="always" v-model="mixin_player.time" :lazy="true"
+                            @change="changetime(mixin_player.time)" :min="0"
+                            :max="mixin_player.howl.duration() == 0 ? 1 : mixin_player.howl.duration()" :interval="0.01"
+                            :tooltip-style="tooltipStyle"></vue-slider>
                     </div>
-                    <div data-v-8298fe8a="" class="text-[#fff] text-[1.6vw] scale-[0.8] opacity-50">03:19</div>
+                    <div data-v-8298fe8a="" class="text-[#000] text-[3vw] scale-[0.8] opacity-50">{{
+                       timecl(mixin_player.howl.duration())  }}</div>
                 </div>
                 <!-- 播放部分 -->
                 <div data-v-8298fe8a="" class="h-[12.3vw] flex w-[100vw] items-center justify-evenly"><svg
@@ -262,7 +259,12 @@
 export default {
     data() {
         return {
-            show: false
+            show: false,
+            tooltipStyle: {
+                height: 0,
+                overflow: 'hidden',
+                display: 'none'
+            }
         }
     },
     created() {
@@ -271,6 +273,9 @@ export default {
         }, 300)
     },
     methods: {
+        changetime(time) {
+            this.mixin_player.howl.seek(time)
+        },
         dback() {
             this.$router.go(-1)
         },
@@ -281,6 +286,14 @@ export default {
             this.show = false
             this.mixin_player.replaceTracks(this.mixin_player.tracks, a.id)
         },
+        timecl(time) {
+            time=Math.round(time)
+            if (time < 10) return `00:0${time}`
+            else if (time < 60) return `00:${time}`
+            else if (time % 60 < 10) return `${Math.floor(time / 60)}:0${time % 60}`
+            else return `${Math.floor(time / 60)}:${time % 60}`
+        }
+
     }
 }
 </script>
