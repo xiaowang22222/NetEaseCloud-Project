@@ -33,14 +33,14 @@
             </div>
 
             <van-cell @click.stop="showPopup">
-                <Icon icon="icon-park-solid:music-list" />
+                <Icon icon="icon-park-solid:music-list" class="w-[5vw] h-[5vw]" />
             </van-cell>
         </div>
         <van-popup v-model="show" position="bottom" :style="{ height: '40%' }">
             <div class="pl-[5vw] pr-[5vw]">
                 <div data-v-36d9f586="" class="playmusic py-[6vw]">
                     <h1 data-v-36d9f586="" class="text-[4vw] font-extrabold">
-                        当前播放 <span data-v-36d9f586="" class="text-[2vw] text-[#929293]">(35) </span></h1>
+                        当前播放 <span data-v-36d9f586="" class="text-[2vw] text-[#929293]">({{ playlist.length }}) </span></h1>
                     <div data-v-36d9f586="" class="flex justify-between mt-[6.6vw] items-center">
                         <div data-v-36d9f586="" class="flex"><svg data-v-36d9f586="" xmlns="http://www.w3.org/2000/svg"
                                 xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em"
