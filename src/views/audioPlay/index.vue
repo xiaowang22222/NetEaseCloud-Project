@@ -129,10 +129,10 @@
                 <!-- 播放部分 -->
                 <div data-v-8298fe8a="" class="h-[12.3vw] flex w-[100vw] items-center justify-evenly">
                     <div @click="singleTuneCirculation">
-                        <div v-if="mixin_player.loopMode == 0">
+                        <div v-if="mixin_player.loopMode == 1">
                             <Icon icon="solar:repeat-one-line-duotone" class="text-[#fff] text-[8vw]"/>
                         </div>
-                        <div v-if="mixin_player.loopMode==1">
+                        <div v-if="mixin_player.loopMode==0">
                             <svg data-v-8298fe8a="" xmlns="http://www.w3.org/2000/svg"
                                 xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em"
                                 height="1em" viewBox="0 0 256 256" class="text-[#fff] text-[8vw] iconify iconify--fad">
