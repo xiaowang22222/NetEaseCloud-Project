@@ -4,7 +4,7 @@
             <div class="w-[31vw] ml-[3vw] " v-for="item in horizontal.creatives" :key="item.creativeId">
                 <div v-if="item.resources.length > 1" class="box h-[35vw]" @click="yincang">
                     <div :class="active[index]" v-for="item, index in item.resources" :key="item.encodeId">
-                        <router-link :to="{ path: '/Playlist', query: { id: item.creativeId } }">
+                        <router-link :to="{ path: '/Playlist', query: { id: item.resourceId } }">
                             <img :src="item.uiElement.image.imageUrl"
                                 class="w-[31vw] h-[31vw] rounded-[8px] relative z-[1]">
                             <p class="dark:text-[#e3e5ec] text-[2.78vw] text-[#3E4759] ">{{
@@ -59,7 +59,7 @@ export default {
         }
     },
     created() {
-        console.log(this.horizontal);
+        console.log("wang",this.horizontal);
     },
 
     mounted() {
